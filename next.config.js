@@ -6,6 +6,15 @@ const withPWA = require('next-pwa')({
 
 const nextTranslate = require('next-translate')
 
-module.exports = withPWA(nextTranslate({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-})) 
+  i18n: {
+    locales: ['fr','ar'],
+    defaultLocale: 'fr'
+  }
+}
+
+module.exports = withPWA(
+  nextTranslate(nextConfig)
+) 
