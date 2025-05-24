@@ -5,7 +5,8 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "npm install next-pwa@5.0.1 --save && npm ci --production --legacy-peer-deps && npm run build",
+        "installCommand": "npm install --legacy-peer-deps",
+        "buildCommand": "npm run build",
         "distDir": ".next"
       }
     }
