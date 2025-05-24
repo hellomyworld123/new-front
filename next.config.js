@@ -1,4 +1,4 @@
-const nextTranslate = require('next-translate')
+const nextTranslate = require('next-translate');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,17 +7,17 @@ const nextConfig = {
     locales: ['fr','ar'],
     defaultLocale: 'fr'
   }
-}
+};
 
-let config = nextTranslate(nextConfig)
+let config = nextTranslate(nextConfig);
 
 if (process.env.NODE_ENV === 'production') {
-  const withPWA = require('next-pwa')({
+  const withPWA = require('next-pwa');
+  config = withPWA({
     dest: 'public',
     register: true,
     skipWaiting: true
-  })
-  config = withPWA(config)
+  })(config);
 }
 
-module.exports = config 
+module.exports = config; 
