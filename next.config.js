@@ -6,18 +6,13 @@ const nextConfig = {
   i18n: {
     locales: ['fr','ar'],
     defaultLocale: 'fr'
-  }
-};
-
-let config = nextTranslate(nextConfig);
-
-if (process.env.NODE_ENV === 'production') {
-  const withPWA = require('next-pwa');
-  config = withPWA({
+  },
+  pwa: {
     dest: 'public',
     register: true,
     skipWaiting: true
-  })(config);
-}
+  }
+};
 
-module.exports = config; 
+const withPWA = require('next-pwa')(nextConfig);
+module.exports = nextTranslate(withPWA); 
