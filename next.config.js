@@ -1,9 +1,3 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true
-})
-
 const nextTranslate = require('next-translate')
 
 /** @type {import('next').NextConfig} */
@@ -15,6 +9,15 @@ const nextConfig = {
   }
 }
 
-module.exports = withPWA(
-  nextTranslate(nextConfig)
-) 
+let config = nextTranslate(nextConfig)
+
+if (process.env.NODE_ENV === 'production') {
+  const withPWA = require('next-pwa')({
+    dest: 'public',
+    register: true,
+    skipWaiting: true
+  })
+  config = withPWA(config)
+}
+
+module.exports = config 
