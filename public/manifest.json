@@ -1,0 +1,21 @@
+{
+  "name": "Sahâr Nail Care",
+  "short_name": "Sahâr",
+  "description": "L'art de sublimer vos mains",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#C9A66B",
+  "icons": [
+    {
+      "src": "/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

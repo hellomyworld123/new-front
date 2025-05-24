@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sahâr Nail Care - Frontend
 
-## Getting Started
+Application web moderne pour le salon de beauté Sahâr Nail Care, développée avec Next.js.
 
-First, run the development server:
+## Fonctionnalités
 
+- 🌐 Support multilingue (Français/Arabe)
+- 📱 PWA (Progressive Web App)
+- 🎨 Design moderne avec Tailwind CSS
+- 📅 Système de réservation avec FullCalendar
+- 🔒 Interface d'administration sécurisée
+- 📱 Responsive design
+
+## Technologies utilisées
+
+- Next.js 14
+- React 18
+- Tailwind CSS
+- FullCalendar
+- next-translate (i18n)
+- next-pwa
+
+## Installation
+
+1. Cloner le dépôt :
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/hellomyworld123/new-front.git
+cd new-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Installer les dépendances :
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Créer le fichier `.env.local` :
+```
+NEXT_PUBLIC_API_URL=https://sahar-backend.onrender.com
+NEXT_PUBLIC_ADMIN_PASS=sahar123
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Lancer le serveur de développement :
+```bash
+npm run dev
+```
 
-## Learn More
+## Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+new-frontend/
+├── public/
+│   ├── locales/     # Fichiers de traduction
+│   ├── manifest.json # Configuration PWA
+│   └── assets/      # Images et médias
+├── src/
+│   ├── app/         # Pages Next.js
+│   ├── components/  # Composants React
+│   └── lib/         # Utilitaires
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Déploiement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le site est déployé sur Vercel. Les variables d'environnement sont configurées dans le dashboard Vercel.
 
-## Deploy on Vercel
+## Contribution
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit les changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push sur la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licence
+
+Ce projet est sous licence MIT.
